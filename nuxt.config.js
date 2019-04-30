@@ -94,6 +94,6 @@ module.exports = {
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
   server: {
-    port: 8001
+    port: 8002
   }
 }

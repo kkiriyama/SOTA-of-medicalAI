@@ -3,7 +3,8 @@
     <div class="card-columns">
       <article-card
         v-for="article in articles"
-        :key="article.id"
+        :id="article.sys.id"
+        :key="article.sys.id"
         :title="article.fields.titleJa"
         :date="article.sys.createdAt"
       />
