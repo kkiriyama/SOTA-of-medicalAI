@@ -18,7 +18,7 @@
 <script>
 import Card from '~/components/Card'
 import Header from '~/components/Header'
-import { createClient } from '~/plugins/contentful.js'
+import { createClient } from '~/plugins/contentful'
 
 const client = createClient()
 
