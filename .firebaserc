@@ -1,6 +1,5 @@
 {
   "projects": {
-    "production": "sota-of-medicalai"
-    "test": "sota-of-medicalai-testenv"
+    "default": "sota-of-medicalai"
   }
 }
