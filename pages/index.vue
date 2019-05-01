@@ -24,9 +24,6 @@
 </template>
 
 <script>
-import { firebaseInitializeApp } from '~/plugins/firebase'
-
-firebaseInitializeApp()
 
 export default {
   data() {

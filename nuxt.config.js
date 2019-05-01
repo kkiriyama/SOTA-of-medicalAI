@@ -5,11 +5,13 @@ const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
-  'CTF_CPA_ACCESS_TOKEN'
+  'CTF_CPA_ACCESS_TOKEN',
+  'CTF_CDA_HOSTNAME',
+  'CTF_CPA_HOSTNAME'
 ])
 
 const { createClient } = require('./plugins/contentful')
-const cdaClient = createClient(ctfConfig)
+const client = createClient(ctfConfig)
 
 module.exports = {
   mode: 'universal',
@@ -83,7 +85,7 @@ module.exports = {
   },
   generate: {
     routes() {
-      return cdaClient
+      return client
         .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
         .then((entries) => {
           return [...entries.items.map(entry => `/articles/${entry.sys.id}`)]
@@ -93,6 +95,9 @@ module.exports = {
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
+    CTF_CPA_ACCESS_TOKEN: ctfConfig.CTF_CPA_ACCESS_TOKEN,
+    CTF_CDA_HOSTNAME: ctfConfig.CTF_CDA_HOSTNAME,
+    CTF_CPA_HOSTNAME: ctfConfig.CTF_CPA_HOSTNAME,
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
   server: {

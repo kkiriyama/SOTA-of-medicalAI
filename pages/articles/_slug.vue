@@ -44,7 +44,7 @@
 
 <script>
 import Header from '~/components/Header'
-import { createClient } from '~/plugins/contentful.js'
+import { createClient } from '~/plugins/contentful'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 const client = createClient()
