@@ -18,9 +18,10 @@ const defaultTestConfig = {
   messagingSenderId: process.env.FIREBASE_TEST_MESSAGING_SENDER_ID
 }
 
-module.exports = {
-  firebaseInitializeApp() {
-    const config = process.NODE_DEPLOY === 'production' ? defaultProductionConfig : defaultTestConfig
-    firebase.initializeApp(config)
-  }
+const config = process.NODE_DEPLOY === 'production' ? defaultProductionConfig : defaultTestConfig
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(config)
 }
+
+module.exports = firebase
