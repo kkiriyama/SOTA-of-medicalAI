@@ -84,7 +84,7 @@ module.exports = {
       return cdaClient
         .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
         .then((entries) => {
-          return [...entries.items.map(entry => `/article/${entry.fields.slug}`)]
+          return [...entries.items.map(entry => `/articles/${entry.sys.id}`)]
         })
     }
   },
