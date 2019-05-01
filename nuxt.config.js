@@ -1,9 +1,11 @@
 const pkg = require('./package')
 const { getConfigForKeys } = require('./lib/config.js')
+
 const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
   'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN'
+  'CTF_CDA_ACCESS_TOKEN',
+  'CTF_CPA_ACCESS_TOKEN'
 ])
 
 const { createClient } = require('./plugins/contentful')
@@ -94,6 +96,6 @@ module.exports = {
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
   server: {
-    port: 8002
+    port: 8000
   }
 }
