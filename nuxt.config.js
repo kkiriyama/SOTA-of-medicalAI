@@ -13,9 +13,12 @@ const ctfConfig = getConfigForKeys([
 const { createClient } = require('./plugins/contentful')
 const client = createClient(ctfConfig)
 
+const buildDir = process.env.NODE_DEPLOY === 'production' ? 'prod-dist' : 'preview-dist'
+const generateDir = process.env.NODE_DEPLOY === 'production' ? 'prod-doc' : 'preview-doc'
+
 module.exports = {
   mode: 'universal',
-
+  buildDir: buildDir,
   /*
   ** Headers of the page
   */
@@ -90,7 +93,8 @@ module.exports = {
         .then((entries) => {
           return [...entries.items.map(entry => `/articles/${entry.sys.id}`)]
         })
-    }
+    },
+    dir: generateDir
   },
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
