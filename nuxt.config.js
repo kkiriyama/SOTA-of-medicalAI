@@ -13,9 +13,11 @@ const ctfConfig = getConfigForKeys([
 const { createClient } = require('./plugins/contentful')
 const client = createClient(ctfConfig)
 
+const buildDir = process.env.NODE_DEPLOY === 'production' ? 'prod-dist' : 'preview-dist'
+
 module.exports = {
   mode: 'universal',
-
+  buildDir: buildDir,
   /*
   ** Headers of the page
   */

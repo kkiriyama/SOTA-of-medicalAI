@@ -12,7 +12,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "deploy-production": "firebase deploy --only hosting:production",
+    "deploy-preview": "firebase deploy --only hosting:preview"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.1.0",

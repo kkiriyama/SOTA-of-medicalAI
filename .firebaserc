@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "sota-of-medicalai"
+  },
+  "targets": {
+    "sota-of-medicalai": {
+      "hosting": {
+        "production": [
+          "sota-of-medicalai"
+        ],
+        "preview": [
+          "sota-of-medicalai-preview"
+        ]
+      }
+    }
   }
 }
