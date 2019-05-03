@@ -8,7 +8,7 @@ const defaultConfig = {
   CTF_CPA_HOSTNAME: process.env.CTF_CPA_HOSTNAME
 }
 
-module.exports = {
+export default {
   createClient(config = defaultConfig) {
     let accessToken = config.CTF_CPA_ACCESS_TOKEN
     let host = config.CTF_CPA_HOSTNAME

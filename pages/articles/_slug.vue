@@ -3,10 +3,18 @@
     <common-header />
     <div class="container">
       <div class="top-info row">
-        <h1 class="slug-title"> {{ titleJa }} </h1>
-        <h4 class="slug-title text-muted"> {{ titleEn }} </h4>
-        <p class="slug-date"> 記事の作成日: {{ createdAt }} </p>
-        <p class="slug-date"> 論文の投稿日: {{ publishedDate }} </p>
+        <h1 class="slug-title">
+          {{ titleJa }}
+        </h1>
+        <h4 class="slug-title text-muted">
+          {{ titleEn }}
+        </h4>
+        <p class="slug-date">
+          記事の作成日: {{ createdAt }}
+        </p>
+        <p class="slug-date">
+          論文の投稿日: {{ publishedDate }}
+        </p>
       </div>
       <div class="row">
         <a :href="articleURL">
@@ -29,12 +37,14 @@
           <h4 class="text-center abstract-title">
             要旨(原文)
           </h4>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="abstractEn" />
         </div>
         <div id="abstract-ja" class="col-sm-6">
           <h4 class="text-center abstract-title">
             要旨(日本語訳)
           </h4>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="abstractJa" />
         </div>
       </div>
@@ -44,10 +54,10 @@
 
 <script>
 import Header from '~/components/Header'
-import { createClient } from '~/plugins/contentful'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import contentful from '~/plugins/contentful'
 
-const client = createClient()
+const client = contentful.createClient()
 
 export default {
   transition: 'slide-right',
