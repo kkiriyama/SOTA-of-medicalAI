@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div class="card-header">
-      published：{{ publishedDate.substr(0,10) }}
+    <div class="card-header text-center">
+      published date：{{ publishedDate.substr(0,10) }}
     </div>
     <div class="card-body">
       <h5 class="abst">
@@ -17,9 +17,9 @@
         </nuxt-link>
       </div>
     </div>
-    <div class="card-footer text-muted">
-      <small class="text-muted">
-        投稿：{{ date.substr(0,10) }}
+    <div class="card-footer text-muted text-center">
+      <small class="text-muted ">
+        投稿日：{{ date.substr(0,10) }}
       </small>
     </div>
   </div>
