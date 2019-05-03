@@ -1,4 +1,5 @@
 <template>
+  <div id="app">
   <nav class="navbar navbar-expand-lg navbar-dark header-color">
     <router-link class="navbar-brand brand" to="/">
       Project SoMA
@@ -8,23 +9,27 @@
       type="button"
       data-toggle="collapse"
       data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
+      aria-controls="#navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon" />
     </button>
-
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link class="nav-link" to="/home">
-            Home
+          <router-link class="nav-link" to="/articles">
+            Articles
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/articles">
-            Articles
+          <router-link class="nav-link" to="/about">
+            About
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/contact">
+            Contact
           </router-link>
         </li>
       </ul>
@@ -36,6 +41,7 @@
       </form>
     </div>
   </nav>
+  </div>
 </template>
 
 <script>
