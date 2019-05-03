@@ -1,29 +1,29 @@
 <template>
-<div class="back">
-  <section class="container">
-    <transition name="fade">
-      <div v-show="isVisible">
-        <h1 class="title">
-          SOTA of Medical-AI
-        </h1>
-        <h2 class="subtitle">
-          最新の医療AI論文を日本語で紹介します
-        </h2>
-        <h3>
-          <nuxt-link to="/articles">
-          <button class="btn btn-success">
-            論文一覧
-          </button>
+  <div class="back">
+    <section class="container">
+      <transition name="fade">
+        <div v-show="isVisible">
+          <h1 class="title">
+            SOTA of Medical-AI
+          </h1>
+          <h2 class="subtitle">
+            最新の医療AI論文を日本語で紹介します
+          </h2>
+          <h3>
+            <nuxt-link to="/articles">
+              <button class="btn btn-success">
+                論文一覧
+              </button>
+            </nuxt-link>
+          </h3>
+          <nuxt-link to="/about">
+            <button class="btn btn-info">
+              このサイトについて
+            </button>
           </nuxt-link>
-        </h3>
-        <nuxt-link to="/about">
-          <button class="btn btn-info">
-            このサイトについて
-          </button>
-        </nuxt-link>
-      </div>
-    </transition>
-  </section>
+        </div>
+      </transition>
+    </section>
   </div>
 </template>
 
