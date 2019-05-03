@@ -49,6 +49,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/contentful.js',
+    '~/plugins/firebase.js'
   ],
 
   /*
