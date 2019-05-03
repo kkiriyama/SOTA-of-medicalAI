@@ -1,14 +1,18 @@
 <template>
   <div>
     <common-header />
-    <div class="container">
+    <div class="container-fluid text-center" id="banner">
+      最新の医療AI論文
+    </div>
+    <div class="container-fluid">
       <div class="card-columns">
         <article-card
           v-for="article in articles"
           :id="article.sys.id"
           :key="article.sys.id"
           :title="article.fields.titleJa"
-          :date="article.sys.createdAt"
+          :date="article.sys.createdAt.substr(0, 10)"
+          :publishedDate="article.fields.publishedDate.substr(0, 10)"
         />
       </div>
     </div>
@@ -43,7 +47,10 @@ export default {
 </script>
 
 <style>
-  .card-columns {
+  #banner {
     padding: 40px
+  }
+  .card-columns {
+    margin-top: 40px,
   }
 </style>

@@ -82,7 +82,7 @@ export default {
   color: #EBEBEB;
   word-spacing: 5px;
   padding-bottom: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .links {
