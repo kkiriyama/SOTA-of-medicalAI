@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      published：{{ publishedDate }}
+      published：{{ publishedDate.substr(0,10) }}
     </div>
     <div class="card-body">
       <h5 class="abst">
@@ -19,7 +19,7 @@
     </div>
     <div class="card-footer text-muted">
       <small class="text-muted">
-        投稿：{{ date }}
+        投稿：{{ date.substr(0,10) }}
       </small>
     </div>
   </div>
