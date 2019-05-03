@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light header-color">
+  <nav class="navbar navbar-expand-lg navbar-dark header-color">
     <router-link class="navbar-brand brand" to="/">
       Project SoMA
     </router-link>
@@ -43,6 +43,6 @@
 
 <style>
 .header-color {
-  background-image: linear-gradient(-90deg, #F8CEFD, #FFF9CC);
+  background-image: linear-gradient(-90deg, #3D1141, #474100);
 }
 </style>
