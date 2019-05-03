@@ -1,7 +1,7 @@
 <template>
   <div>
     <common-header />
-    <div class="container">
+    <div class="container-fluid container-slug">
       <div class="top-info row">
         <h1 class="slug-title">
           {{ titleJa }}
@@ -92,7 +92,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.container-slug {
+  padding: 0 5% 0 5%;
+}
+
 .slug-title {
   padding: 30px 30px 0px 30px;
 }
