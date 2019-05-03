@@ -41,3 +41,9 @@ export default {
 }
 
 </script>
+
+<style>
+  .card-columns {
+    padding: 40px
+  }
+</style>
