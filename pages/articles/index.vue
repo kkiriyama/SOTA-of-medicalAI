@@ -1,7 +1,11 @@
 <template>
   <div>
-    <common-header />
-    <div class="container">
+    <common-header articlesis-active="true" />
+    <div id="banner" class="container-fluid text-center">
+      <h5>SOTA of Medical-AI</h5>
+      <h6>最新の医療AI論文を日本語で</h6>
+    </div>
+    <div class="container-fluid">
       <div class="card-columns">
         <article-card
           v-for="article in articles"
@@ -9,6 +13,7 @@
           :key="article.sys.id"
           :title="article.fields.titleJa"
           :date="article.sys.createdAt"
+          :published-date="article.fields.publishedDate"
         />
       </div>
     </div>
@@ -41,3 +46,16 @@ export default {
 }
 
 </script>
+
+<style>
+  #banner {
+    padding: 40px
+  }
+  .card-columns {
+    margin-top: 40px,
+  }
+
+  .active{
+    font-size: 30px,
+  }
+</style>

@@ -1,12 +1,15 @@
 <template>
   <div class="card">
+    <div class="card-header text-center">
+      published date：{{ publishedDate.substr(0,10) }}
+    </div>
     <div class="card-body">
-      <h5>
+      <h5 class="abst">
         {{ title }}
       </h5>
       <div class="detail-btn text-center">
         <nuxt-link
-          class="btn btn-outline-info"
+          class="btn btn-success"
           role="button"
           :to="{name: 'articles-slug', params: {slug: id}}"
         >
@@ -14,9 +17,9 @@
         </nuxt-link>
       </div>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">
-        {{ date }}
+    <div class="card-footer text-muted text-center">
+      <small class="text-muted ">
+        投稿日：{{ date.substr(0,10) }}
       </small>
     </div>
   </div>
@@ -36,12 +39,22 @@ export default {
     date: {
       type: String,
       default: ''
+    },
+    publishedDate: {
+      type: String,
+      default: ''
     }
   }
 }
 </script>
 
 <style>
+.abst {
+  letter-spacing: 0.5px
+}
+.card {
+  margin: 0px;
+}
 .detail-btn {
   margin: 15px 0px 0px 0px;
 }
