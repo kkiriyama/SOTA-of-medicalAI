@@ -1,10 +1,10 @@
 version: '3'
 services:
   soma:
-    container_name: soma
-    build:
-      context: ./
-      dockerfile: ./dckr/Dockerfile
+    # container_name: soma
+    # build:
+    #   context: ./
+    #   dockerfile: ./dckr/Dockerfile
     image: chari8/soma
     ports:
       - "8000:8000"

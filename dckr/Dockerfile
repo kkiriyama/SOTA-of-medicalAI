@@ -17,5 +17,4 @@ COPY ./ $WORKDIR
 ENV HOST 0.0.0.0
 EXPOSE 8000
 
-ENTRYPOINT [ "npm" ]
-CMD ["run", "dev"]
+CMD ["npm", "run", "dev"]
